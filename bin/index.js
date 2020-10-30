@@ -9,7 +9,6 @@ const semver=require('semver');
  const  requiredNodeVersion=require('../package.json').engines.node;//require node version
 // Setting edit distance to 60% of the input string's length
 didYouMean.threshold = 0.6;
-
 //判断node版本号是够满足要求
 function checkNodeVersion(wanted,id){
     const unsupportedNodeVersion=!semver.satisfies(process.version,wanted);
